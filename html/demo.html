@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="GengChao">
+    <link rel="shortcut icon" href="../statics/img/logo/gc_logo.png">
+    <link rel="stylesheet" type="text/css" href="../statics/css/css.css">
+    <script type="text/javascript" src="../statics/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../statics/js/flexdemo.js"></script>
+    <title>Flex Demo</title>
+</head>
+<body>
+<div class="main">
+    <div class="demo_title">
+        <div class="title">
+            <h1>flex属性布局Demo</h1>
+        </div>
+    </div>
+    <div>
+        <h3 class="title">一、容器的属性</h3>
+        <div class="context">
+            <div>
+                <h4>首先设置一个弹性容器</h4>
+                <text>&emsp;&emsp;在样式中给指定标签添加display: flex属性，此时这个标签就是弹性容器，然后添加下面几个属性：<br>
+                    <div class="code_style">
+							<span>
+								.content {<br>
+								&emsp;&emsp;display: flex;<br>
+								}
+							</span>
+                    </div>
+                </text>
+            </div>
+            <div>
+                <h4>1.flex-direction属性</h4>
+                <text>&emsp;&emsp;它的4个值：<br>
+                    <div class="flex-direction btn_group">
+                        <div class="btn active">row</div>
+                        <div class="btn">row-reverse</div>
+                        <div class="btn">column</div>
+                        <div class="btn">column-reverse</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="flex-direction flex_content">
+                        <div class="content_item common_content">1</div>
+                        <div class="content_item common_content">2</div>
+                        <div class="content_item common_content">3</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>2.flex-wrap属性</h4>
+                <text>&emsp;&emsp;它的3个值：<br>
+                    <div class="flex-wrap btn_group">
+                        <div class="btn active">nowrap</div>
+                        <div class="btn">wrap</div>
+                        <div class="btn">wrap-reverse</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="flex-wrap flex_content">
+                        <div class="content_item common_content">1</div>
+                        <div class="content_item common_content">2</div>
+                        <div class="content_item common_content">3</div>
+                        <div class="content_item common_content">4</div>
+                        <div class="content_item common_content">5</div>
+                        <div class="content_item common_content">6</div>
+                        <div class="content_item common_content">7</div>
+                        <div class="content_item common_content">8</div>
+                        <div class="content_item common_content">9</div>
+                        <div class="content_item common_content">10</div>
+                        <div class="content_item common_content">11</div>
+                        <div class="content_item common_content">12</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>3.flex-flow属性</h4>
+                <text>&emsp;&emsp;flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，它的值是这两个属性值的组合，默认值为row
+                    nowrap（以下以flex-direction的row和column为例）：<br>
+                    <div class="flex-flow btn_group">
+                        <div class="btn active">row nowrap</div>
+                        <div class="btn">row wrap</div>
+                        <div class="btn">row wrap-reverse</div>
+                        <div class="btn">column nowrap</div>
+                        <div class="btn">column wrap</div>
+                        <div class="btn">column wrap-reverse</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="flex-flow flex_content">
+                        <div class="content_item common_content">1</div>
+                        <div class="content_item common_content">2</div>
+                        <div class="content_item common_content">3</div>
+                        <div class="content_item common_content">4</div>
+                        <div class="content_item common_content">5</div>
+                        <div class="content_item common_content">6</div>
+                        <div class="content_item common_content">7</div>
+                        <div class="content_item common_content">8</div>
+                        <div class="content_item common_content">9</div>
+                        <div class="content_item common_content">10</div>
+                        <div class="content_item common_content">11</div>
+                        <div class="content_item common_content">12</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>4.justify-content属性</h4>
+                <text>&emsp;&emsp;它的5个值：<br>
+                    <div class="justify-content btn_group">
+                        <div class="btn active">flex-start</div>
+                        <div class="btn">flex-end</div>
+                        <div class="btn">center</div>
+                        <div class="btn">space-between</div>
+                        <div class="btn">space-around</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="justify-content flex_content">
+                        <div class="content_item common_content">1</div>
+                        <div class="content_item common_content">2</div>
+                        <div class="content_item common_content">3</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>5.align-items属性</h4>
+                <text>&emsp;&emsp;它的5个值：<br>
+                    <div class="align-items btn_group">
+                        <div class="btn">flex-start</div>
+                        <div class="btn">flex-end</div>
+                        <div class="btn">center</div>
+                        <div class="btn">baseline</div>
+                        <div class="btn active">stretch</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="align-items flex_content align-items_content">
+                        <div class="content_item common_content">1</div>
+                        <div class="content_item common_content common_div_1">2</div>
+                        <div class="content_item common_content common_div_2">3</div>
+                        <div class="content_item common_content common_div_3">4</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>6.align-content属性</h4>
+                <text>&emsp;&emsp;它的6个值，使用这个属性的前提是当前容器设置了flex-wrap: wrap;<br>
+                    <div class="align-content btn_group">
+                        <div class="btn">flex-start</div>
+                        <div class="btn">flex-end</div>
+                        <div class="btn">center</div>
+                        <div class="btn">space-between</div>
+                        <div class="btn">space-around</div>
+                        <div class="btn active">stretch</div>
+                        <div class="btn" title="将容器的justify-content和align-content属性均设为space-around。">九格均分</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="align-content flex_content align-content_content">
+                        <div class="content_item common_content align-content_div">1</div>
+                        <div class="content_item common_content align-content_div">2</div>
+                        <div class="content_item common_content align-content_div">3</div>
+                        <div class="content_item common_content align-content_div">4</div>
+                        <div class="content_item common_content align-content_div">5</div>
+                        <div class="content_item common_content align-content_div">6</div>
+                        <div class="content_item common_content align-content_div">7</div>
+                        <div class="content_item common_content align-content_div">8</div>
+                        <div class="content_item common_content align-content_div">9</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="title">二、项目的属性</h3>
+        <div class="context">
+            <div>
+                <h4>首先设置一个弹性容器</h4>
+                <text>&emsp;&emsp;在弹性容器下面的项目中添加下面几个属性：<br>
+                    <div class="code_style">
+						<span>
+                                .item {<br>
+								&emsp;&emsp;/* order */<br>
+								&emsp;&emsp;/* flex-grow */<br>
+								&emsp;&emsp;/* flex-shrink */<br>
+								&emsp;&emsp;/* flex-basis */<br>
+								&emsp;&emsp;/* flex */<br>
+								&emsp;&emsp;/* align-self */<br>
+								}
+						</span>
+                    </div>
+                </text>
+            </div>
+            <div>
+                <h4>1.order属性</h4>
+                <text>&emsp;&emsp;给它4个值：<br>
+                    <div class="item-order btn_group">
+                        <div class="btn active">0</div>
+                        <div class="btn">2</div>
+                        <div class="btn">3</div>
+                        <div class="btn">4</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="item-order flex_content">
+                        <div class="content_item common_content order_common_content"></div>
+                        <div class="content_item common_content order_common_content_1">1</div>
+                        <div class="content_item common_content order_common_content_2">2</div>
+                        <div class="content_item common_content order_common_content_3">3</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>2.flex-grow属性</h4>
+                <text>&emsp;&emsp;给它3个值：<br>
+                    <div class="flex-grow btn_group">
+                        <div class="btn active">1</div>
+                        <div class="btn">2</div>
+                        <div class="btn">3</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="flex-grow flex_content items">
+                        <div class="content_item common_content flex-grow_common_content">1</div>
+                        <div class="content_item common_content flex-grow_common_content flex-grow_item">1</div>
+                        <div class="content_item common_content flex-grow_common_content">1</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>3.flex-shrink属性</h4>
+                <text>&emsp;&emsp;给它3个值：<br>
+                    <div class="flex-shrink btn_group">
+                        <div class="btn active">1</div>
+                        <div class="btn">2</div>
+                        <div class="btn">3</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="flex-shrink flex_content items">
+                        <div class="content_item common_content flex-shrink_common_content">1</div>
+                        <div class="content_item common_content flex-shrink_common_content flex-shrink_item">1</div>
+                        <div class="content_item common_content flex-shrink_common_content">1</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>4.flex-basis属性</h4>
+                <text>&emsp;&emsp;只有初始化的时候起作用：<br>
+                    <div class="flex-basis btn_group">
+                        <div class="btn active">200</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="flex-basis flex_content">
+                        <div class="content_item flex-basis_common_content">150</div>
+                        <div class="content_item flex-basis_common_content flex-basis_item">200</div>
+                        <div class="content_item flex-basis_common_content">150</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>5.flex属性</h4>
+                <text>&emsp;&emsp;flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选，该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)：<br>
+                    <div class="item-flex btn_group">
+                        <div class="btn active" title="auto (1 1 auto)">auto</div>
+                        <div class="btn" title="auto (0 0 auto)">none</div>
+                        <div class="btn">1 2 auto</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="item-flex flex_content items">
+                        <div class="content_item common_content item-flex_common_content">auto</div>
+                        <div class="content_item common_content item-flex_common_content item-flex_item">auto</div>
+                        <div class="content_item common_content item-flex_common_content">auto</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>6.align-self属性</h4>
+                <text>&emsp;&emsp;align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch：<br>
+                    <div class="align-self btn_group">
+                        <div class="btn active">auto</div>
+                        <div class="btn">flex-start</div>
+                        <div class="btn">flex-end</div>
+                        <div class="btn">center</div>
+                        <div class="btn">baseline</div>
+                        <div class="btn">stretch</div>
+                    </div>
+                </text>
+                <div class="content">
+                    <div class="align-self flex_content">
+                        <div class="content_item common_content common_div_1">auto</div>
+                        <div class="content_item common_content common_div_2">auto</div>
+                        <div class="content_item common_content align-self_item">auto</div>
+                        <div class="content_item common_content common_div_3">auto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="nav">
+            <span>版权所有©2018-2019 | </span>
+            <span> AUTHOR：放羊啊 | </span>
+            <span> QQ：529219656</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
